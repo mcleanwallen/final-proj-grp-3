@@ -27,3 +27,19 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: "1"
     depends_on:
     - "zookeeper"
+
+    stedi: 
+      image: scmurdock/stedi
+      ports: 
+      - "4567:4567"	
+      environment:
+        REDIS_HOST: "redis"
+        REDIS_PORT: "6379"
+        REDIS_DB: 0
+        KAFKA_BROKER: "kafka:(1?)9092"
+        KAFKA_RISK_TOPIC: "customer-risk-topic"
+
+    redis: 
+      image: redis:6.0.6
+      ports: 
+      - "6379:6379"
