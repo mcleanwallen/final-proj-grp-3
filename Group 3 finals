@@ -8,14 +8,14 @@ version: '3.7'
 
 services:
   zookeeper:
-    image: confluentinc/cp-zookeeper:5.2.2
+    image: confluentinc/cp-zookeeper:5.5.1
     ports:
     - "2181:2181"
     environment:
       ZOOKEEPER_CLIENT_PORT: "2181"
 
   kafka:
-    image: confluentinc/cp-kafka:5.2.2
+    image: confluentinc/cp-kafka:5.5.1
     ports:
     - "9092:9092"
     environment:
@@ -36,7 +36,7 @@ services:
         REDIS_HOST: "redis"
         REDIS_PORT: "6379"
         REDIS_DB: 0
-        KAFKA_BROKER: "kafka:(1?)9092"
+        KAFKA_BROKER: "kafka:9092"
         KAFKA_RISK_TOPIC: "customer-risk-topic"
 
     redis: 
