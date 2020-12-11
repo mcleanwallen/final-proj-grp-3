@@ -28,7 +28,7 @@ services:
     depends_on:
     - "zookeeper"
 
-  stedi: 
+  stedi:
     image: scmurdock/stedi
     ports:
     - "4567:4567"
@@ -39,7 +39,7 @@ services:
       KAFKA_BROKER: "kafka:9092"
       KAFKA_RISK_TOPIC: "customer-risk-topic"
 
-  redis: 
+  redis:
     image: redis:6.0.6
     ports:
     - "6379:6379"
