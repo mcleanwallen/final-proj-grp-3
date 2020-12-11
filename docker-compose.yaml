@@ -36,7 +36,7 @@ services:
       REDIS_HOST: "redis"
       REDIS_PORT: "6379"
       REDIS_DB: 0
-      KAFKA_BROKER: "kafka:9092"
+      KAFKA_BROKER: "kafka:19092"
       KAFKA_RISK_TOPIC: "customer-risk-topic"
 
   redis: 
